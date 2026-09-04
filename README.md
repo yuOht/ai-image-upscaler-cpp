@@ -108,7 +108,7 @@ export ESRGAN_MODEL_PATH=~/convert/models/A-ESRGAN/A_ESRGAN_Multi.xml
 
 ### 5. ビルド
 
-ソースコード(`ai_scale.cpp` / `scaling.c`)を変更した場合のみ、以下でビルドします。
+ソースコード(`ai_scale.cpp` / `scaling.c`)を変更した場合もしくは初回動作時のみ、以下でビルドします。
 
 ```bash
 ./build.sh
