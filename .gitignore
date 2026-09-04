@@ -1,0 +1,15 @@
+# ビルド生成物
+bin/
+
+# Python仮想環境
+ov_env/
+
+# 容量の大きいモデル(READMEの手順でダウンロードしてください)
+models/A-ESRGAN/
+models/realesrgan/
+models/EDSR_x2.pb
+models/EDSR_x3.pb
+models/EDSR_x4.pb
+
+# Windowsからコピーした際の必要ないファイル
+*Zone.Identifier
