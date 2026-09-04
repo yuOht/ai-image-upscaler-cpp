@@ -89,8 +89,8 @@ pip install openvino
 このプロジェクトは以下のモデルを利用しています。容量の大きいモデルはリポジトリに含めていないため、各配布元から取得し `models/` 以下に配置してください。
 
 | モデル | 入手先 | 配置先(例) |
-|---|---|---|
-| A-ESRGAN(本プロジェクトで使用) | https://github.com/stroking-fishes-ml-corp/A-ESRGAN | `models/A-ESRGAN/` |
+| --- | --- | --- |
+| A-ESRGAN(本プロジェクトで使用) | <https://github.com/stroking-fishes-ml-corp/A-ESRGAN> | `models/A-ESRGAN/` |
 | Real-ESRGAN (x4plus) | Real-ESRGAN公式リリース | `models/realesrgan/` |
 | EDSR (x2/x3/x4) | OpenCV super-resolution モデル配布元 | `models/EDSR_x*.pb` |
 
@@ -127,7 +127,7 @@ source ov_env/bin/activate
 ### 引数
 
 | 引数 | 説明 |
-|---|---|
+| --- | --- |
 | 第1引数 | 処理したい元画像のパス(`images/` に配置) |
 | 第2引数(拡大率) | 補間モードは任意の値、AI超解像モードは `2.0` / `3.0` / `4.0` のみ指定可 |
 | 第3引数(補間モード) | `0`: ニアレストネイバー / `1`: バイリニア / `2`: バイキュービック / `3`: AI超解像 |
@@ -157,7 +157,7 @@ deactivate
 ## 補足
 
 - タイル分割処理(64px単位、マージン16px)により、大きな画像でもメモリを抑えて推論します。
-- モデルの出力レンジ(0〜1 / 0〜255)は輝度の最大値から自動判定しています。
+- モデルの出力レンジ(0〜1 / 0〜255)は輝度の最大値から自動判定しています。入力側は現在同梱しているモデル(A-ESRGAN等)の前提に合わせて0〜1正規化で固定しているため、別系統のモデルを追加する場合はこの部分の調整が必要です。
 - GPU推論に失敗した場合は自動的にCPUにフォールバックします。
 
 ## Credits / 謝辞
